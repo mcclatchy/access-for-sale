@@ -1,0 +1,39 @@
+/**
+ * Fuse: Default Skin
+ */
+
+$vertical-space: 25px;
+$horizontal-space: 15px;
+$align-width: 700px;
+
+
+
+#masthead-container, .masthead {
+	margin-bottom: 0;
+}
+
+#leaderboard-ad {
+	margin: 0;
+	padding: 0;
+
+  .ad-widget {
+    margin: 0;
+
+    :not(:empty) {
+      margin: $vertical-space auto;
+    }
+  }
+}
+
+section[role=main].container.story {
+  width: 100%;
+  padding: 0;
+
+	.row {
+		margin: 0;
+	}
+
+	[class^=col-] {
+		padding: 0;
+	}
+}

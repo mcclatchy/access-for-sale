@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  font-family: 'McClatchy Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+body {
+  background-color: #fff;
+  margin: 0;
+}
+
+.img-group {
+box-sizing: content-box;
+}
+
+.interactive__graphic {
+  // width: 95%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.interactive__legend {
+  text-align: center;
+  position: absolute;
+  left: 3%;
+  background: rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+  span {
+    font-size: 2em;
+    vertical-align: middle;
+    line-height: 1;
+    font-family: sans-serif;
+  }
+}
+
+.tooltip {
+    font-family: sans-serif;
+    background: rgba(255,255,255,.9);
+    color: #222;
+    display: block;
+    border: 1px solid black;
+    font-size: 14px;
+    max-width: 320px;
+    padding: .2rem .4rem;
+    position: absolute;
+    z-index: 300;
+    visibility: hidden;
+}
+
+.tooltip__name {
+  font-weight: bold;
+}

@@ -1,0 +1,44 @@
+header.masthead.short {
+    background: #222;
+    opacity: 0;
+    animation: fade-in .5s 11s ease-in forwards;
+    .logo.short {
+        filter: invert(1) brightness(3) saturate(0);
+        height: 30px;
+    }
+    a.impact.mh-only-lg {
+        background: #373737;
+    }
+    svg.icon, .masthead-top .left .squeezable .labeled-menu span {
+        fill: #9c9c9c;
+        color: #9c9c9c;
+        &:hover {
+            color: #fff;
+            fill: #fff;
+        }
+    }
+    svg.icon.weather-button path, .masthead .masthead-top .searchbox .icon  {
+        fill: #9c9c9c;
+    }
+}
+
+.masthead .masthead-top .searchbox .icon  {
+    fill: #9c9c9c;
+}
+
+.masthead .masthead-top .searchbox .searchbox-go {
+    color: #fff;
+}
+
+.masthead a {
+    color: #9c9c9c;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

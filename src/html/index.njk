@@ -1,0 +1,23 @@
+{%extends "templates/base.njk"%}
+
+{%block content%}
+<section class="interactive">
+  <div class="intractive__info">
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit Iusto, dolor</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi praesentium quam officiis deleniti? Eveniet libero modi aut neque vero tenetur dolores. Omnis repellendus officia necessitatibus reprehenderit provident totam? Cum, dolorem.</p>
+    <p><b>Zoom with the scroll wheel. Click and drag to pan.</b></p>
+  </div>
+  <div class="interactive__graphic">
+
+    <div class="interactive__legend">
+      <span>→</span> = Flow of money
+    </div>
+    <svg class="svg"></svg>
+  </div>
+  <div class="tooltip">
+    <div class="tooltip__name"></div>
+    <div class="tooltip__about"></div>
+  </div>
+</section>
+<script src="../js/main.js"></script>
+{% endblock %}

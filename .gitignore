@@ -1,0 +1,6 @@
+node_modules
+public
+.cache
+dist
+drive.json
+src/img

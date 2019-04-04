@@ -1,0 +1,188 @@
+.intro {
+  max-width: none !important;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  margin-bottom: 22vh !important;
+  font-family: 'McClatchy Sans', sans-serif;
+}
+
+.intro__head {
+  font-family: 'McClatchy Sans', sans-serif;
+  font-size: 55px;
+  text-align: right;
+  padding: 20px 3% 5px;
+  line-height: 0.88;
+  color: #fff;
+  font-weight: bold;
+  background-color: #000;
+  margin: .5em 0 0 0;
+  position: relative;
+  opacity: 0;
+  animation: fade-in .5s 8.5s ease-in forwards;
+  .perversion {
+    display: block;
+  }
+  .perversion,
+  .justice {
+    font-weight: 700;
+  }
+  .of {
+    font-size: 0.9em;
+    position: absolute;
+    font-weight: 300;
+    color: $main-color;
+    display: inline-block;
+    vertical-align: text-top;
+    left: 3.5%;
+    line-height: 1;
+  }
+  .justice {
+    color: $main-color;
+    font-size: 1.4em;
+  }
+}
+
+.subtitle {
+  font-family: 'McClatchy Sans', Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 17px;
+  margin: .35em 0 0 0;
+  opacity: 0;
+  animation: fade-in .5s 8.5s ease-in forwards;
+}
+
+.intro__text {
+  height: 40vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.intro__text p {
+  overflow: hidden;
+  border-right: .1em solid #000;
+  white-space: nowrap;
+  text-align: center;
+  opacity: 0;
+  flex: 0 0 auto;
+  font-size: 1.6em !important;
+  &:nth-child(1){
+    width: 12ch;
+    animation: typing 1s steps(16, end) forwards;
+    animation-delay: 2s;
+    @media (min-width: 600px) {
+      width: 16ch;
+    }
+  }
+  &:nth-child(2) {
+    width: 12ch;
+    animation: typing 1s steps(16, end) forwards;
+    animation-delay: 3.4s;
+    @media (min-width: 600px) {
+      width: 16ch;
+    }
+  }
+  &:nth-child(3) {
+    width: 26ch;
+    animation: typing 1.75s steps(35, end) forwards;
+    animation-delay: 4.75s;
+    @media (min-width: 600px) {
+      width: 35ch;
+    }
+  }
+  &:nth-child(4) {
+    width: 25ch;
+    animation: typingLast 1.75s 6.6s steps(32, end) forwards, blink .5s 8.5s step-end 10 alternate;
+    @media (min-width: 600px) {
+      width: 32ch;
+    }
+  }
+}
+
+.scroll-marker {
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  animation: fade-in .3s 3.5s ease-in forwards;
+  color: #222;
+  .glyphicon {
+    margin: 0;
+    font-size: 2.5em;
+  }  
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .1em solid #000;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes typingLast {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+@media (min-width: 600px) {
+  .intro {
+    width: 80%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .intro__head {
+    font-size: 7em;
+    .of {
+      left: 5%;
+    }
+  }
+  p.subtitle {
+    font-size: 1.3em;
+  }
+  .intro__text {
+    align-items: center;
+    p {
+      letter-spacing: .15em;
+      font-size: 2em !important;
+    }
+  }
+
+}

@@ -1,0 +1,37 @@
+.mug-group {
+  transition: opacity .25s;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.mug-group:hover {
+  opacity: 1;
+}
+
+.mug-group circle {
+  transition: fill .25s;
+}
+
+.mug-group.highlight {
+  opacity: 1;
+}
+
+.mug-group.highlight circle {
+  fill: $main-color !important;
+}
+
+.label {
+  font: 15px "McClatchy Sans", Helvetica, Arial, sans-serif;
+  text-anchor: middle;
+  fill: $main-color;
+}
+
+.label:first-of-type, .label-rect:first-of-type {
+  visibility: hidden;
+}
+
+.label,
+.node--root,
+.node--leaf {
+  pointer-events: none;
+}

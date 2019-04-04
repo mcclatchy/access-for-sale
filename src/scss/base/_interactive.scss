@@ -1,0 +1,224 @@
+.interactive {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  perspective: 500px;
+  perspective-origin: 50% 50%;
+  padding: 0 !important;
+  h1 {
+    text-align: center;
+    margin-bottom: 0 !important;
+    font:600 30px/1.2em "McClatchy Serif","McClatchy Slab",serif;
+  }
+  &__graphic {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  p {
+    font-family: "Lyon", Georgia, serif;
+    margin-top: 0;
+    margin-bottom: 0.4em;
+    font-size: 15px;
+  }
+  p span::before {
+    content: 'Tap';
+    font-family: 'Lyon', Georgia, 'Times New Roman', Times, serif;
+    @media (min-width: 768px) {
+      content: 'Click';
+    }
+  }
+}
+
+.interactive__controls {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  p {
+    flex-basis: 100%;
+    text-align: center;
+  }
+}
+
+button.zoom-btn {
+  position: relative;
+  vertical-align: middle;
+  font-size: 1em;
+  background: #585858;
+  color: #fff;
+  border: none;
+  padding: 10px 15px 8px 15px;
+  margin: 0 3px;
+  border-radius: 40px;
+  outline: none;
+  overflow: hidden;
+  transition: color 0.3s;
+  z-index: 1;
+  cursor: pointer;
+  &.focus {
+    color: $main-color;
+    &::before,
+    &::after {
+      transform: translate3d(0, 100%, 0);
+    }
+    &::after {
+      transition-delay: 0.175s;
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 100%;
+    left: 0;
+    z-index: -1;
+    transition: transform 0.3s;
+    transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
+  }
+  &::before {
+      background: #333;
+  }
+  &::after {
+      background: #000;
+  }
+}
+
+span.zoom-btn {
+  text-align: center;
+  display: block;
+  margin: 0.5em 0;
+  cursor: pointer;
+  text-decoration: underline;
+  align-self: center;
+  flex: 1 100%;
+}
+
+
+/*---------------
+* Tooltip styles
+---------------*/
+.tooltip {
+    // margin-top: 1em;
+    background: #fff;
+    padding: .8em;
+    width: 97%;
+    max-width: 50rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 2px;
+    min-height: 100px;
+    align-self: center;
+    position: absolute;
+    top: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    animation: slide-out-left 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    font-size: 1.2em;
+}
+
+.tooltip.tooltip--show {
+    animation: slide-in-left 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.tooltip__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    vertical-align: middle;
+    font-size: 16px;
+    color: #fff;
+    background-color: #777;
+    border-radius: 40px;
+    padding: 3px 8px 0 8px;
+    cursor: pointer;
+}
+
+.tooltip__name-label {
+    display: inline;
+    color: $main-color;
+    background-color: #000;
+    padding: 2px;
+    margin-right: 4px;
+}
+
+.tooltip__pic {
+    width: 75px;
+    border-radius: 50%;
+    border: 3px solid $main-color;
+    margin-right: 5px;
+    img {
+        width: 100%;
+        border-radius: 50%;
+        vertical-align: middle;
+    }
+}
+
+.tooltip__name {
+    display: inline;
+    font-weight: bold;
+}
+
+.tooltip__about {
+    width: 100%;
+    margin-top: .75em;
+    font-family: "Lyon";
+    font-size: 16px;
+    line-height: 1.3;
+    // max-height: 200px;
+    // overflow-y: scroll;
+}
+
+@media (min-width: 768px) {
+  .interactive {
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1200px !important;
+    margin-left: auto;
+    margin-right: auto;
+    h1 {
+      font-size: 40px;
+    }
+    h1, p:first-of-type {
+      flex: 1 100%;
+      text-align: center;
+    }
+    &__controls {
+      flex: 1 50%;
+      margin-top: 5em;
+      align-items: flex-start;
+    }
+    &__graphic {
+      flex: 1 50%;
+      width: unset;
+      max-width: 600px;
+    }
+  }
+  .tooltip {
+    position: relative;
+    max-width: unset;
+    width: unset;
+    transform: unset;
+    top: unset;
+    bottom: 0;
+    margin-top: 2em;
+  }
+  .tooltip__about {
+    font-size: 18px;
+  }
+  button.zoom-btn {
+    font-size: 1.2em;
+  }
+}
