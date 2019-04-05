@@ -12,6 +12,11 @@ body {
 box-sizing: content-box;
 }
 
+.interactive {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 .interactive__graphic {
   // width: 95%;
   margin: 0 auto;
