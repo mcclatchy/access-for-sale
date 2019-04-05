@@ -1,41 +1,63 @@
-import * as d3 from 'd3-selection';
 import { Viz } from './modules/graphic';
 
-function graphicResize() {
-    let graphicWidth = graphic.node().offsetWidth;
+const container = document.querySelector('.interactive');
 
-    let vizWidth = window.innerHeight > graphicWidth ? graphicWidth : window.innerHeight;
+const mq = window.matchMedia('(orientation: portrait)');
+mq.addListener(handleOrientationChange);
 
-    let vizMargin = innerWidth < 600 ? 0 : graphicWidth / 7;
-
-    viz = new Viz(graphicWidth, graphicWidth, vizMargin);
-    // Empties graphic before creating new one
-    viz.clearGraphic();
-    // Render new graphic
-    nodes = viz.renderGraphic();
-}
+let viz;
+let height;
 
 function init() {
-    let container = d3.select('.interactive');
-    let graphic = container.select('.interactive__graphic');
-    let viz = new Viz(graphic.node().offsetWidth, 600);
-    viz.renderGraphic();
+  let width = container.clientWidth;
+  viz = new Viz(width, height);
+  viz.destroyGraphic();
+  viz.renderGraphic();
+
+  const resizer = () => {
+    if (width !== container.clientWidth) {
+      viz = new Viz(container.clientWidth, height);
+      viz.destroyGraphic();
+      viz.renderGraphic();
+      width = container.clientWidth;
+    }
+  };
+
+  let resizeTaskId = null;
+
+  window.addEventListener('resize', () => {
+    if (resizeTaskId !== null) {
+      clearTimeout(resizeTaskId);
+    }
+    resizeTaskId = setTimeout(() => {
+      resizeTaskId = null;
+      resizer();
+      sendHeight();
+    }, 150);
+  });
 }
 
-function heightResize() {
-    graphic.style('height', `${graphic.node().offsetWidth}px`);
-}
-
-function sendHeight() {
-    window.parent.postMessage({
-        sentinel: 'amp',
-        type: 'embed-size',
-        height: document.body.scrollHeight
-    }, '*');
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-    init();
-    sendHeight();
+document.addEventListener('DOMContentLoaded', function() {
+  handleOrientationChange(mq);
+  init();
+  sendHeight();
 });
 
+function sendHeight() {
+  window.parent.postMessage(
+    {
+      sentinel: 'amp',
+      type: 'embed-size',
+      height: document.body.scrollHeight
+    },
+    '*'
+  );
+}
+
+function handleOrientationChange(e) {
+    if (e.matches) {
+        height = 500;
+    } else {
+        height = 700;
+    }
+}

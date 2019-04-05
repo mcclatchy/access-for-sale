@@ -4,12 +4,29 @@
 }
 
 body {
-  background-color: #fff;
   margin: 0;
 }
 
+h3 {
+  font: bold 1.4em 'McClatchy Sans', serif;
+  margin: 15px 0;
+  font-weight: 500;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.4em;
+}
+
 .img-group {
-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+}
+
+.link-arrow {
+  text-anchor: middle;
+  font: 22px sans-serif;
+  user-select: none;
 }
 
 .interactive {
@@ -18,37 +35,57 @@ box-sizing: content-box;
 }
 
 .interactive__graphic {
-  // width: 95%;
   margin: 0 auto;
   position: relative;
+  cursor: move;
 }
 
 .interactive__legend {
-  text-align: center;
+  text-align: left;
   position: absolute;
-  left: 3%;
+  left: 0;
   background: rgba(255, 255, 255, 0.8);
   pointer-events: none;
+  p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
   span {
     font-size: 2em;
     vertical-align: middle;
     line-height: 1;
     font-family: sans-serif;
   }
+  img {
+    width: 30px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 5px;
+    padding: 2.5px;
+    padding-left: 3px;
+    background: #000;
+  }
+}
+
+@media (orientation: portrait) {
+  .interactive__legend {
+    position: relative;
+    margin: 0 15px;
+  }
 }
 
 .tooltip {
-    font-family: sans-serif;
-    background: rgba(255,255,255,.9);
-    color: #222;
-    display: block;
-    border: 1px solid black;
-    font-size: 14px;
-    max-width: 320px;
-    padding: .2rem .4rem;
-    position: absolute;
-    z-index: 300;
-    visibility: hidden;
+  font-family: sans-serif;
+  background: rgba(255, 255, 255, 0.9);
+  color: #222;
+  display: block;
+  border: 1px solid black;
+  font-size: 14px;
+  max-width: 320px;
+  padding: 0.2rem 0.4rem;
+  position: absolute;
+  z-index: 300;
+  visibility: hidden;
 }
 
 .tooltip__name {

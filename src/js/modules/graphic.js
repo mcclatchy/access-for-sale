@@ -3,16 +3,23 @@ import data from './data.json';
 import imgs from '../../img/*.jpg';
 
 class Viz {
-  constructor(width, winHeight) {
+  constructor(width, height) {
     this.width = width;
-    this.height = winHeight;
+    this.height = height;
   }
   renderGraphic() {
     const links = data.links.map(d => Object.create(d));
     const nodes = data.nodes.map(d => Object.create(d));
 
-    const nodeRadius = 20;
-    const linkDistance = 40;
+    let nodeRadius = 20;
+    let linkDistance = 90;
+    let chargeStr = -500;
+
+    if (window.innerWidth < 600) {
+        nodeRadius = 15;
+        linkDistance = 45;
+        chargeStr = -300
+    }
 
     const groupData = [
       { name: 'guest', mx: 1 },
@@ -33,14 +40,14 @@ class Viz {
           .distance(linkDistance)
           .id(d => d.id)
       )
-      .force('charge', d3.forceManyBody().strength(-500).distanceMax(300))
+      .force('charge', d3.forceManyBody().strength(chargeStr))
       .force(
         'collide',
         d3.forceCollide().radius(d => getRadius(d.group))
       )
       // .force('center', d3.forceCenter(width / 2, height / 2))
-      .force('x', d3.forceX(width / 2))
-      .force('y', d3.forceY(height));
+      .force('x', d3.forceX(width /2.2))
+      .force('y', d3.forceY(height * .75));
 
     const svg = d3
       .select('.svg')
@@ -61,14 +68,10 @@ class Viz {
 
     const handleZoom = d3
       .zoom()
-      .scaleExtent([1, 10])
-      .on('zoom', zoomed);
+      .scaleExtent([3/4, 8])
+      .on('zoom', () => g.attr('transform', d3.event.transform));
 
     svg.call(handleZoom);
-
-    function zoomed() {
-      g.attr('transform', d3.event.transform);
-    }
 
     const linkG = g
       .append('g')
@@ -81,7 +84,7 @@ class Viz {
       .attr('id', d => d.index)
       .attr('stroke-opacity', 0.6)
       .attr('stroke', '#333')
-      .attr('stroke-width', '2');
+      .attr('stroke-width', '1.5');
 
     const lineText = linkG
       .append('text')
@@ -89,13 +92,10 @@ class Viz {
       .attr('href', d => `#${d.index}`)
       .attr('startOffset', '50%')
       .append('tspan')
-      .attr(
-        'style',
-        'text-anchor: middle; font: 22px sans-serif; user-select: none'
-      )
+      .attr('class', 'link-arrow')
       .attr('fill', '#333')
       .text('→')
-      .attr('dy', 7.75);
+      .attr('dy', 8);
 
     const node = g
       .append('g')
@@ -113,9 +113,6 @@ class Viz {
       .attr('stroke', '#333')
       .attr('stroke-width', 2);
 
-    const mediaURL =
-      'https://media.miamiherald.com/static/media/projects/2019/trump-access/images/';
-
     const img = node
       .append('image')
       .attr('xlink:href', d =>
@@ -131,23 +128,54 @@ class Viz {
 
     tooltip.style('position', 'absolute').style('visibility', 'hidden');
 
-    node.on('touchmove mousemove', d => {
+    node.on('touchmove mousemove', function(d) {
       tooltip.style('visibility', 'visible');
       tooltip.select('.tooltip__about').text(d.tooltip);
       tooltip.select('.tooltip__name').text(d.id);
+
       tooltip
         .style('top', `${d3.event.pageY - 10}px`)
         .style('left', `${d3.event.pageX + 10}px`);
+      
+    });
+
+    linkG.on('touchmove mousemove', function(d) {
+      tooltip.style('visibility', 'visible');
+      tooltip.select('.tooltip__name').text("");
+      tooltip.select('.tooltip__about').text(d.relationship);
+      tooltip
+        .style('top', `${d3.event.pageY - 10}px`)
+        .style('left', `${d3.event.pageX + 10}px`);    
+
+      d3.select(this).select("path").style("stroke", "#31409f").style('stroke-opacity', 1);
+
+      d3.selectAll(`g[data-name="${d.source.id}"] > circle, g[data-name="${d.target.id}"] > circle`)
+        .style('stroke', '#31409f')
+        .style('stroke-width', "6");
     });
 
     node.on('touchend mouseleave', () => tooltip.style('visibility', 'hidden'));
+
+    linkG.on('touchend mouseleave', function(d) {
+      tooltip.style('visibility', 'hidden')
+
+      d3.select(this)
+        .select('path')
+        .style('stroke', '#333')
+        .style('stroke-opacity', 0.6);
+
+      d3.selectAll(`g[data-name="${d.source.id}"] > circle, g[data-name="${d.target.id}"] > circle`)
+        .style('stroke', '#333')
+        .style('stroke-width', "2");
+
+    });
 
     let pres = node.filter(d => d.group == "president").datum();
     let tVict = node.filter(d => d.id == 'Trump Victory').datum();
     let tOrg = node.filter(d => d.id == 'The Trump Organization').datum();
 
     simulation.on('tick', () => {
-      pres.fy = height / 10;
+      pres.fy = height / 12;
       pres.fx = width / 2;
 
       tVict.fy = height / 6;
@@ -162,6 +190,17 @@ class Viz {
       );
       node.attr('transform', d => `translate(${d.x},${d.y})`);
     });
+
+    simulation.on('end', () => {
+      window.parent.postMessage(
+        {
+          sentinel: 'amp',
+          type: 'embed-size',
+          height: document.body.scrollHeight
+        },
+        '*'
+      );
+    })
 
     function getRadius(group) {
       let res;
@@ -182,31 +221,10 @@ class Viz {
       return res * nodeRadius;
     }
   }
-}
-
-function drag(simulation) {
-  function dragstarted(d) {
-    if (!d3.event.active) simulation.alphaTarget(0.3).restart();
-    d.fx = d.x;
-    d.fy = d.y;
+  destroyGraphic() {
+    d3.selectAll('.svg g').remove();
+    d3.selectAll('svg defs').remove();
   }
-
-  function dragged(d) {
-    d.fx = d3.event.x;
-    d.fy = d3.event.y;
-  }
-
-  function dragended(d) {
-    if (!d3.event.active) simulation.alphaTarget(0);
-    d.fx = null;
-    d.fy = null;
-  }
-
-  return d3
-    .drag()
-    .on('start', dragstarted)
-    .on('drag', dragged)
-    .on('end', dragended);
 }
 
 export { Viz };

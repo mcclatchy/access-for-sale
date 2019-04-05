@@ -4,7 +4,7 @@
 			"id": "Pu Jing",
 			"group": "guest",
 			"photo": "?",
-			"tooltip": "Vice President of Shenzhen Qianhai Equity Center, according to Chinese Social Media.",
+			"tooltip": "Vice President of Shenzhen Qianhai Equity Center, according to Chinese social media.",
 			"tooltipSource": "http://www.88088.com/wenzhoush/shdt/2018/0305/472004.shtml need to use hotspot"
 		},
 		{
@@ -24,8 +24,8 @@
 		{
 			"id": "Dr. Charles Lee",
 			"group": "guest",
-			"photo": "DrCharlesLee",
-			"tooltip": "Recruits Chinese clients for Trump tourism. Claims to be both a prince and an ambassador to the United Nations, a claim that is not supported by U.N. documentation. Sells trips to promote Xi Jinping's business diplomacy initative. ",
+			"photo": "DrCharlesLee_RED",
+			"tooltip": "Recruits Chinese clients for Trump tourism. Claims to be both a prince and an ambassador to the United Nations, a claim unsupported by U.N. documentation. Sells trips to promote Xi Jinping's business diplomacy initative. ",
 			"communistPartyTiesDefinedByCurrentOrFormerLeadershipPositionsInTheChineseCommunistPartyOrItsOverseasAffiliateOrganizationsAndorInADirectBusinessRelationshipWithTheChineseGovernmentOrChineseCommunistParty": "y",
 			"tooltipSource": "https://docs.google.com/document/d/1KEEo_LYZUr_APx-fKoL7NDVC6EN9DoM0JNzi-2DGMQU/edit?ts=5ca64d37; https://drive.google.com/open?id=1NJv_5Gad0Y37hAS_RUC9ufRQ_Mu4U420"
 		},
@@ -42,31 +42,34 @@
 			"group": "guest",
 			"photo": "jingjing",
 			"tooltip": "CEO of Silver Aristocrats, an arm of an online investment bank marketed to wealthy Chinese clients.",
-			"tooltipSource": "佟京京, http://hlkk.pavatar.us/forum_topic/5106/asiangopjoinedthebreakfastwithpresidenttrumpinnewyorkcity#/"
+			"tooltipSource": "佟京京, http://hlkk.pavatar.us/forum_topic/5106/asiangopjoinedthebreakfastwithpresidenttrumpinnewyorkcity#/; https://docs.google.com/document/d/10aCylpNrGrLTcEpnBfPgbhcftYbSm4KoCNQv61U0Ggs/edit; http://www.pavatar.us/forum_topic/5111/%E7%89%B9%E6%9C%97%E6%99%AE%E6%97%A9%E9%A4%90%E4%BC%9A++asian.gop+%E5%8F%AC%E9%9B%86%E5%90%84%E5%9C%B0%E5%88%86%E4%BC%9A%E5%85%B1%E8%A5%84%E7%9B%9B%E4%B8%BE"
 		},
 		{
 			"id": "Zhang Kui",
 			"group": "guest",
 			"photo": "KuiZhang",
-			"tooltip": "Occupation: Unknown. Awarded U.S.-China Friendship Ambassador award by Dr. Charles Lee."
+			"tooltip": "Awarded U.S.-China Friendship Ambassador award by Dr. Charles Lee. Occupation: Unknown",
+			"tooltipSource": "http://www.ripwtv.org/Article/news/186.htm"
 		},
 		{
 			"id": "Lei Yu",
 			"group": "guest",
 			"photo": "LeiYu",
-			"tooltip": "Occupation: Unknown. A guest of the United Nations Friends of China Association. Occupation: Unknown"
+			"tooltip": "Occupation: Unknown",
+			"tooltipSource": "http://webcache.googleusercontent.com/search?q=cache:D-EoPZKBb9IJ:www.uncfa.org/Article/bobao/1126.htm+&cd=20&hl=en&ct=clnk&gl=us"
 		},
 		{
 			"id": "Liting Xiong",
 			"group": "guest",
 			"photo": "LitingXiong",
-			"tooltip": "Occupation: Chinese businessman, according to Cliff Li. \"An important guest invited by the Womens Charity Foundation to Safari Night,\" according to the foundation's WeChat. Xiong bid for two $20,000 paintings on the spot to support the charity sale."
+			"tooltip": "Occupation: Chinese businessman, according to Cliff Li. \"An important guest invited by the Womens Charity Foundation to Safari Night,\" according to the foundation's WeChat. Xiong bid for two $20,000 paintings on the spot to support the charity sale.",
+			"tooltipSource": "https://drive.google.com/open?id=1oLjwnucqdfw_AHuOGfNkq28dpJdkKL7a"
 		},
 		{
 			"id": "Lu Biao",
 			"group": "guest",
 			"photo": "LuBiao",
-			"tooltip": "President of Guangdong Huizhou Fuji Real Estate Development Co., Ltd., according to UNFCA. Awarded U.S.-China Friendship Ambassador award by Dr. Charles Lee",
+			"tooltip": "President of Guangdong Huizhou Fuji Real Estate Development Co., Ltd., according to UNFCA. Awarded U.S.-China Friendship Ambassador award by Dr. Charles Lee.",
 			"tooltipSource": "http://www.88088.com/wenzhoush/shdt/2018/0305/472004.shtml need to use hotspot"
 		},
 		{
@@ -74,13 +77,14 @@
 			"group": "guest",
 			"photo": "LuLiang",
 			"tooltip": "Chinese-born tech executive, founder of 5miles and CyberMiles, jersey sponsor of the Dallas Mavericks. ",
-			"usCitizenOrGreenCardHolder": "y"
+			"usCitizenOrGreenCardHolder": "y",
+			"tooltipSource": "https://docs.google.com/document/d/1YpNXwXqgrTMF26b-TuwEZ-tAhkU2hg2pMKn3F9-qHnU/edit"
 		},
 		{
 			"id": "RNC Cipriani Breakfast",
 			"group": "event",
 			"photo": "Event",
-			"tooltip": "Fundraiser for Trump's 2020 re-election on Dec. 2, 2017 held at Cipriani Restaurant in Manhattan. The event was attended by President Donald Trump, top adviser Kelleyanne Connway, and other top members of the GOP.",
+			"tooltip": "Fundraiser for Trump's 2020 re-election on Dec. 2, 2017, in New York and attended by President Donald Trump, adviser Kelleyanne Connway and other top members of the GOP.",
 			"communistPartyTiesDefinedByCurrentOrFormerLeadershipPositionsInTheChineseCommunistPartyOrItsOverseasAffiliateOrganizationsAndorInADirectBusinessRelationshipWithTheChineseGovernmentOrChineseCommunistParty": "N/A",
 			"usCitizenOrGreenCardHolder": "N/A"
 		},
@@ -88,7 +92,7 @@
 			"id": "Mar-a-Lago Safari Night 2018",
 			"group": "event",
 			"photo": "Event",
-			"tooltip": "Fundraisesr for a little-known children's charity hosted by the president's sister, Elizabeth Trump Grau. This event would turn Mar-a-Lago into the number one location for Trump tourism.",
+			"tooltip": "Fundraiser for a little-known children's charity hosted by the president's sister, Elizabeth Trump Grau. This event would turn Mar-a-Lago into the number one location for Trump tourism.",
 			"communistPartyTiesDefinedByCurrentOrFormerLeadershipPositionsInTheChineseCommunistPartyOrItsOverseasAffiliateOrganizationsAndorInADirectBusinessRelationshipWithTheChineseGovernmentOrChineseCommunistParty": "N/A",
 			"usCitizenOrGreenCardHolder": "N/A"
 		},
@@ -96,7 +100,7 @@
 			"id": "Mar-a-Lago Friends of Israel",
 			"group": "event",
 			"photo": "Event",
-			"tooltip": "Last minute Pro-Israel event held at Mar-a-Lago after larger charities pulled out post-Charlottesville, attended by future Florida governor Ron DeSantis. Co-sponsored by the Asian GOP, the event was marketed on Chinese social media as a \"high end business visiting mission.\"",
+			"tooltip": "Last minute Pro-Israel event held at Mar-a-Lago after larger charities pulled out post-Charlottesville, attended by future Florida governor Ron DeSantis. ",
 			"communistPartyTiesDefinedByCurrentOrFormerLeadershipPositionsInTheChineseCommunistPartyOrItsOverseasAffiliateOrganizationsAndorInADirectBusinessRelationshipWithTheChineseGovernmentOrChineseCommunistParty": "N/A",
 			"usCitizenOrGreenCardHolder": "N/A"
 		},
@@ -104,7 +108,7 @@
 			"id": "Mar-a-Lago RNC Lunch",
 			"group": "event",
 			"photo": "Event",
-			"tooltip": "Fundraiser for Trump's 2020 re-election on held at Mar-a-Lago on March 3, 2018, attended by Donald Trump and other top members of the GOP. A bundler of Cindy's events gave out an U.S. China Ambassador award to attendees of this event.",
+			"tooltip": "Fundraiser for Trump's 2020 re-election on held at Mar-a-Lago on March 3, 2018, attended by Donald Trump and other top members of the GOP. ",
 			"communistPartyTiesDefinedByCurrentOrFormerLeadershipPositionsInTheChineseCommunistPartyOrItsOverseasAffiliateOrganizationsAndorInADirectBusinessRelationshipWithTheChineseGovernmentOrChineseCommunistParty": "N/A",
 			"usCitizenOrGreenCardHolder": "N/A"
 		},
@@ -119,7 +123,7 @@
 		{
 			"id": "Trump Victory",
 			"group": "organization",
-			"photo": "TrumpVictory",
+			"photo": "TrumpPenceVictory",
 			"tooltip": "Political Action Committee exclusively benefiting Donald Trump's 2020 re-election campaign.",
 			"communistPartyTiesDefinedByCurrentOrFormerLeadershipPositionsInTheChineseCommunistPartyOrItsOverseasAffiliateOrganizationsAndorInADirectBusinessRelationshipWithTheChineseGovernmentOrChineseCommunistParty": "N/A",
 			"usCitizenOrGreenCardHolder": "N/A"
@@ -135,101 +139,95 @@
 		{
 			"id": "Xianqin Qu ",
 			"group": "guest",
-			"photo": "Qu",
-			"tooltip": "Co-founder of Women's Charity Foundation Inc. Pesident of the Florida Chapter of the Council for the Promotion of Peaceful Unification — a group ”directly subordinate” to the Communist Party of China, according to a 2018 U.S. government report. Director of U.S.-China Trade",
-			"communistPartyTiesDefinedByCurrentOrFormerLeadershipPositionsInTheChineseCommunistPartyOrItsOverseasAffiliateOrganizationsAndorInADirectBusinessRelationshipWithTheChineseGovernmentOrChineseCommunistParty": "y"
+			"photo": "Qu_RED",
+			"tooltip": "Pesident of the Florida Chapter of the Council for the Promotion of Peaceful Unification — a group ”directly subordinate” to the Communist Party of China, according to a 2018 U.S. government report. Co-founder with Cindy Yang of Women's Charity Foundation Inc. ",
+			"communistPartyTiesDefinedByCurrentOrFormerLeadershipPositionsInTheChineseCommunistPartyOrItsOverseasAffiliateOrganizationsAndorInADirectBusinessRelationshipWithTheChineseGovernmentOrChineseCommunistParty": "y",
+			"tooltipSource": "https://docs.google.com/document/d/1m08oA5p2Qw0WLVAuH7gaJ7gUbLC5ZYkfp8Getd4mW58/edit"
 		},
 		{
 			"id": "Shanjie Li",
 			"group": "guest",
-			"photo": "ShanjieLi",
-			"tooltip": "Miami Real Estate investor specializing in developments qualified for EB5 investor visas. He is the spokesperson for a Florida company that is 83% owned by the Chinese government. ",
-			"communistPartyTiesDefinedByCurrentOrFormerLeadershipPositionsInTheChineseCommunistPartyOrItsOverseasAffiliateOrganizationsAndorInADirectBusinessRelationshipWithTheChineseGovernmentOrChineseCommunistParty": "y"
-		},
-		{
-			"id": "unknown businessman 1",
-			"group": "guest",
-			"photo": "unknown",
-			"tooltip": "Attended Safari Night with Dr. Charles Lee, according to Cliff Li"
-		},
-		{
-			"id": "unknown businessman 2",
-			"group": "guest",
-			"photo": "unknown",
-			"tooltip": "Attended Safari Night with Dr. Charles Lee, according to Cliff Li"
+			"photo": "ShanjieLi_RED",
+			"tooltip": "Miami real estate investor specializing in developments qualified for EB5 investor visas. He is the face of a Florida company that is 83% owned by the Chinese government, according to business ownership records.",
+			"communistPartyTiesDefinedByCurrentOrFormerLeadershipPositionsInTheChineseCommunistPartyOrItsOverseasAffiliateOrganizationsAndorInADirectBusinessRelationshipWithTheChineseGovernmentOrChineseCommunistParty": "y",
+			"tooltipSource": "https://docs.google.com/document/d/1259VgxVYEH5ltl7ukb7iYHQrjboInnz-FhIKm49mN58/edit"
 		},
 		{
 			"id": "Xie Yong",
 			"group": "guest",
 			"photo": "XieYong",
-			"tooltip": "Occupation: Owner of Chinese beauty product link Dr. Plant. Received \"U.S. China Friendship Ambassador\" from Dr. Charles Lee's group. ",
+			"tooltip": "Owner of Chinese beauty product link Dr. Plant. Received \"U.S. China Friendship Ambassador\" award from Dr. Charles Lee's group. ",
 			"tooltipSource": "https://web.archive.org/web/20190321182524/http://www.uncfa.org/Article/news/1091.htm"
 		},
 		{
 			"id": "Zijing (the Martian) Xu",
 			"group": "guest",
-			"photo": "xu",
-			"tooltip": "Chinese-born bitcoin miner who runs his business from Australia. "
+			"photo": "Xu",
+			"tooltip": "Chinese-born bitcoin miner who runs his business from Australia. ",
+			"tooltipSource": "https://docs.google.com/document/d/10aCylpNrGrLTcEpnBfPgbhcftYbSm4KoCNQv61U0Ggs/edit; http://www.pavatar.us/forum_topic/5111/%E7%89%B9%E6%9C%97%E6%99%AE%E6%97%A9%E9%A4%90%E4%BC%9A++asian.gop+%E5%8F%AC%E9%9B%86%E5%90%84%E5%9C%B0%E5%88%86%E4%BC%9A%E5%85%B1%E8%A5%84%E7%9B%9B%E4%B8%BE"
 		},
 		{
 			"id": "Yuan Yue",
 			"group": "guest",
-			"photo": "YuanYue",
-			"tooltip": "Chairman of China Shuanghe Education Group, KidsRKids China Franchisee, according to a spokesperson for KidsRKids China.",
+			"photo": "?",
+			"tooltip": "Chairman of China Shuanghe Education Group, according to Dr. Charles' Lee's invite. KidsRKids China Franchisee, according to a spokesperson for KidsRKids China.",
 			"tooltipSource": "CHECK EVENT ATTENDED http://www.88088.com/wenzhoush/shdt/2018/0305/472004.shtml need to use hotspot"
 		},
 		{
 			"id": "Zubin Gong",
 			"group": "guest",
 			"photo": "zubingong",
-			"tooltip": "Cindy Yang's husband, current manager of Tokyo Day Spas, and a co-founder of the company GY US Investments, which advertises access to Trump."
+			"tooltip": "Cindy Yang's husband, manager of Tokyo Day Spas and a co-founder of the company GY US Investments, which advertises access to Trump.",
+			"tooltipSource": "http://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=OfficerRegisteredAgentName&directionType=Initial&searchNameOrder=GONGZUBIN%20L170002536082&aggregateId=flal-l17000253608-3694f682-b891-4627-869f-fb8d182590cd&searchTerm=Gong%20Zubin&listNameOrder=GONGZUBIN%20L170002536082; http://search.sunbiz.org/Inquiry/CorporationSearch/SearchResultDetail?inquirytype=OfficerRegisteredAgentName&directionType=Initial&searchNameOrder=GONGZUBIN%20P150000749660&aggregateId=domp-p15000074966-34beba57-f2eb-44bc-a50e-d0cbea37171f&searchTerm=Gong%20Zubin&listNameOrder=GONGZUBIN%20L170002536082"
 		},
 		{
 			"id": "Sun Ye",
 			"group": "guest",
 			"photo": "SunYe",
-			"tooltip": "Chinese Actress and Model, according to the New York Times",
-			"tooltipSource": "https://drive.google.com/open?id=1Quji5yz5NlaazGLM0oecfmwuplQ2Fcmb"
+			"tooltip": "Chinese actress and model, according to the New York Times",
+			"tooltipSource": "https://drive.google.com/open?id=1Quji5yz5NlaazGLM0oecfmwuplQ2Fcmb; https://www.nytimes.com/2019/03/16/us/cindy-yang-trump-donations.html"
 		},
 		{
 			"id": "Huachu Tang",
 			"group": "guest",
-			"photo": "Tang",
-			"tooltip": " A 55-year-old Chinese businessman. Chairman of China Dragon Automotive Investment, according to Cindy Yang's WeChat.",
+			"photo": "tang",
+			"tooltip": "Chairman of China Dragon Automotive Investment, according to Cindy Yang's WeChat.",
 			"tooltipSource": "https://finance.yahoo.com/news/why-chinese-entrepreneur-flew-17-184608100.html"
 		},
 		{
 			"id": "Yuehong Yang",
 			"group": "guest",
-			"photo": "tk",
-			"tooltip": "General Manager of China Dragon Automotive Investment, according to Cindy Yang's WeChat"
+			"photo": "Yang",
+			"tooltip": "General Manager of China Dragon Automotive Investment, according to Cindy Yang's WeChat and business website."
 		},
 		{
 			"id": "Li Jing",
 			"group": "guest",
 			"photo": "jingli",
-			"tooltip": "New York Socialite, and friend of Cindy Yang, who once told a magazine there was zero distance between her and the Trumps."
+			"tooltip": "New York Socialite and associate of Cindy Yang, who once told a magazine there was zero distance between her and the Trumps.",
+			"tooltipSource": "https://www.cehui8.com/sxnews/qiye/20171212/540.html;  https://www.miamiherald.com/latest-news/article227941749.html"
 		},
 		{
 			"id": "Jie Yang",
 			"group": "guest",
 			"photo": "?",
-			"tooltip": "Chinese financier accuesed of securities fraud in China, currently living in New York. Former ties to the Chinese Communist Party.",
-			"communistPartyTiesDefinedByCurrentOrFormerLeadershipPositionsInTheChineseCommunistPartyOrItsOverseasAffiliateOrganizationsAndorInADirectBusinessRelationshipWithTheChineseGovernmentOrChineseCommunistParty": "y",
-			"usCitizenOrGreenCardHolder": "y"
+			"tooltip": "Chinese financier accuesed of securities fraud in China, currently living in New York. ",
+			"usCitizenOrGreenCardHolder": "y",
+			"tooltipSource": "CHECK COMMUNIST PARTY CONNECTIONS https://docs.google.com/document/d/1SmrLIryYqGDbDJhEuSljDOyY3KO_oSFW17FvcvSk1rA/edit"
 		},
 		{
 			"id": "Lolita Zhao Qiang",
 			"group": "guest",
 			"photo": "LolitaZhaoQiang",
-			"tooltip": "Occupation: North American chef diet CEO, WeChat Translation",
+			"tooltip": "North American chef diet CEO, according WeChat translation.",
 			"tooltipSource": "http://www.sohu.com/a/209872354_471737"
 		},
 		{
 			"id": "Lu Zihan",
 			"group": "guest",
 			"photo": "?",
-			"tooltip": "Occupation: Unknown"
+			"tooltip": "Occupation: Unknown",
+			"tooltipSource": "http://www.pavatar.us/forum_topic/5111/%E7%89%B9%E6%9C%97%E6%99%AE%E6%97%A9%E9%A4%90%E4%BC%9A++asian.gop+%E5%8F%AC%E9%9B%86%E5%90%84%E5%9C%B0%E5%88%86%E4%BC%9A%E5%85%B1%E8%A5%84%E7%9B%9B%E4%B8%BE"
 		},
 		{
 			"id": "Feng Yahua",
@@ -242,54 +240,70 @@
 			"id": "Wu Hao",
 			"group": "guest",
 			"photo": "?",
-			"tooltip": "Occupation: Unknown"
+			"tooltip": "Occupation: Unknown",
+			"tooltipSource": "http://www.pavatar.us/forum_topic/5111/%E7%89%B9%E6%9C%97%E6%99%AE%E6%97%A9%E9%A4%90%E4%BC%9A++asian.gop+%E5%8F%AC%E9%9B%86%E5%90%84%E5%9C%B0%E5%88%86%E4%BC%9A%E5%85%B1%E8%A5%84%E7%9B%9B%E4%B8%BE"
 		},
 		{
 			"id": "Huang Yacun",
 			"group": "guest",
 			"photo": "Yacun",
-			"tooltip": "Occupation: NY SENIOR CARE IN THE VALLEY, according to WeChat ",
+			"tooltip": "Occupation: Unknown",
 			"tooltipSource": "http://www.pavatar.us/forum_topic/5111/%E7%89%B9%E6%9C%97%E6%99%AE%E6%97%A9%E9%A4%90%E4%BC%9A++asian.gop+%E5%8F%AC%E9%9B%86%E5%90%84%E5%9C%B0%E5%88%86%E4%BC%9A%E5%85%B1%E8%A5%84%E7%9B%9B%E4%B8%BE"
 		},
 		{
 			"id": "Jiang Rui",
 			"group": "guest",
-			"photo": "jiangrui",
-			"tooltip": "Co-Host of the Houston International Film Festival",
-			"communistPartyTiesDefinedByCurrentOrFormerLeadershipPositionsInTheChineseCommunistPartyOrItsOverseasAffiliateOrganizationsAndorInADirectBusinessRelationshipWithTheChineseGovernmentOrChineseCommunistParty": "y",
-			"tooltipSource": " "
+			"photo": "Jiang_Rui",
+			"tooltip": "Co-Chair of the Houston Independent Film Festival and famous painter, according to an Asian GOP blog post.",
+			"tooltipSource": "http://www.pavatar.us/forum_topic/5106/asiangopjoinedthebreakfastwithpresidenttrumpinnewyorkcity#/"
 		},
 		{
 			"id": "Ren Meihua",
 			"group": "guest",
 			"photo": "?",
-			"tooltip": "Occupation: Unknown"
+			"tooltip": "Occupation: Unknown",
+			"tooltipSource": "http://www.pavatar.us/forum_topic/5111/%E7%89%B9%E6%9C%97%E6%99%AE%E6%97%A9%E9%A4%90%E4%BC%9A++asian.gop+%E5%8F%AC%E9%9B%86%E5%90%84%E5%9C%B0%E5%88%86%E4%BC%9A%E5%85%B1%E8%A5%84%E7%9B%9B%E4%B8%BE"
 		},
 		{
 			"id": "Yun Li",
 			"group": "guest",
-			"photo": "yunli.png",
-			"tooltip": "Chairman of the Meyer Alliance Cloud Information, Miami Celebrity, ",
-			"tooltipSource": "https://wemp.app/posts/763200ac-81fb-4d36-bc89-b8926c1fb0d3"
+			"photo": "YunLi",
+			"tooltip": "Chairman of the Meyer Alliance Cloud Information, Miami Celebrity.",
+			"tooltipSource": "https://wemp.app/posts/763200ac-81fb-4d36-bc89-b8926c1fb0d3; http://www.pavatar.us/forum_topic/5111/%E7%89%B9%E6%9C%97%E6%99%AE%E6%97%A9%E9%A4%90%E4%BC%9A++asian.gop+%E5%8F%AC%E9%9B%86%E5%90%84%E5%9C%B0%E5%88%86%E4%BC%9A%E5%85%B1%E8%A5%84%E7%9B%9B%E4%B8%BE"
 		},
 		{
 			"id": "Lou Li",
 			"group": "guest",
 			"photo": "?",
-			"tooltip": "Occupation: Unknown"
+			"tooltip": "Occupation: Unknown",
+			"tooltipSource": "http://www.pavatar.us/forum_topic/5111/%E7%89%B9%E6%9C%97%E6%99%AE%E6%97%A9%E9%A4%90%E4%BC%9A++asian.gop+%E5%8F%AC%E9%9B%86%E5%90%84%E5%9C%B0%E5%88%86%E4%BC%9A%E5%85%B1%E8%A5%84%E7%9B%9B%E4%B8%BE"
 		},
 		{
 			"id": "Jie Zhang",
 			"group": "guest",
-			"photo": "tk",
-			"tooltip": "President of Vantage Technology, according to Cindy Yang's WeChat"
+			"photo": "JieZhang",
+			"tooltip": "President of Vantage Technology, according to a caption from a photo on Cindy Yang's business website.",
+			"tooltipSource": "https://drive.google.com/open?id=1uG7fKCMK5wudFjcvY5k8rYbGs3B-51pA"
 		},
 		{
 			"id": "Meng Jinhong",
 			"group": "guest",
-			"photo": "Shang",
-			"tooltip": "Also known as Monica Shang. Head of the Chinese Performing Arts Group and former chairwoman of the Association of Science and Technology Associations. ",
-			"communistPartyTiesDefinedByCurrentOrFormerLeadershipPositionsInTheChineseCommunistPartyOrItsOverseasAffiliateOrganizationsAndorInADirectBusinessRelationshipWithTheChineseGovernmentOrChineseCommunistParty": "y"
+			"photo": "Shang_RED",
+			"tooltip": "Also known as Monica Shang. Head of the Chinese Performing Arts Group and former chairwoman of the Association of Science and Technology Associations, a group associated with the Chinese Communist Party.",
+			"communistPartyTiesDefinedByCurrentOrFormerLeadershipPositionsInTheChineseCommunistPartyOrItsOverseasAffiliateOrganizationsAndorInADirectBusinessRelationshipWithTheChineseGovernmentOrChineseCommunistParty": "y",
+			"tooltipSource": "https://drive.google.com/open?id=1oSQWmxYQngyNHaWE95URfDSdDEGEm2wv; https://www.famehall.biz/miami/2015/20151123091645.shtml; http://sfchineseperformingarts.com/Events.html"
+		},
+		{
+			"id": "Safari Night 2019",
+			"group": "event",
+			"photo": "Event",
+			"tooltip": "Cancelled Mar-a-Lago fundraiser for Young Adventurers Children's Charity, advertised by Cindy Yang as a chance for Chinese elites to mingle with members of the Trump family and \"do propaganda.\" "
+		},
+		{
+			"id": "Yujing Zhang",
+			"group": "guest",
+			"photo": "?",
+			"tooltip": "Chinese woman arrested attempting to enter Mar-a-Lago for Cindy Yang's event carrying various electronics including a jump drive containing malware."
 		}
 	],
 	"links": [
@@ -298,280 +312,220 @@
 			"target": "Mar-a-Lago Friends of Israel",
 			"relationship": "attended",
 			"costWhereApplicable": "$750 - $75,000",
-			"minimumPayment": 750,
-			"maximumPayment": 75000
+			"undefined": "https://drive.google.com/open?id=1DgIe3GZ167QDi0eXoTQCA-HVL6P0wg8a"
 		},
 		{
 			"source": "Lei Yu",
 			"target": "Mar-a-Lago Friends of Israel",
 			"relationship": "attended",
-			"costWhereApplicable": "$750 - $75,000",
-			"minimumPayment": 750,
-			"maximumPayment": 75000
+			"costWhereApplicable": "$750 - $75,000"
 		},
 		{
 			"source": "Xie Yong",
 			"target": "Mar-a-Lago Friends of Israel",
 			"relationship": "attended",
-			"costWhereApplicable": "$750 - $75,000",
-			"minimumPayment": 750,
-			"maximumPayment": 75000
+			"costWhereApplicable": "$750 - $75,000"
 		},
 		{
 			"source": "Sun Ye",
 			"target": "Mar-a-Lago New Year's Eve",
 			"relationship": "attended",
-			"costWhereApplicable": 1000,
-			"minimumPayment": 1000,
-			"maximumPayment": 1000
+			"costWhereApplicable": 1000
 		},
 		{
 			"source": "Huachu Tang",
 			"target": "Mar-a-Lago New Year's Eve",
 			"relationship": "attended",
-			"costWhereApplicable": 1000,
-			"minimumPayment": 1000,
-			"maximumPayment": 1000
+			"costWhereApplicable": 1000
 		},
 		{
 			"source": "Yuehong Yang",
 			"target": "Mar-a-Lago New Year's Eve",
 			"relationship": "attended",
-			"costWhereApplicable": 1000,
-			"minimumPayment": 1000,
-			"maximumPayment": 1000
+			"costWhereApplicable": 1000
 		},
 		{
 			"source": "Jie Zhang",
 			"target": "Mar-a-Lago New Year's Eve",
 			"relationship": "attended",
-			"costWhereApplicable": 1000,
-			"minimumPayment": 1000,
-			"maximumPayment": 1000
+			"costWhereApplicable": 1000
 		},
 		{
 			"source": "Pu Jing",
 			"target": "Mar-a-Lago RNC Lunch",
 			"relationship": "attended",
 			"costWhereApplicable": "$2,700- $50,000",
-			"minimumPayment": 2700,
-			"maximumPayment": 50000
+			"undefined": "may need to soft the language for these to read invited. Actually should be fine. Charles and others are pictured at the event here. https://drive.google.com/open?id=1sL7UfogZJUKQoq2V_g_L20K0feniFoNe"
 		},
 		{
 			"source": "Lu Kunning",
 			"target": "Mar-a-Lago RNC Lunch",
 			"relationship": "attended",
 			"costWhereApplicable": "$2,700- $50,000",
-			"minimumPayment": 2700,
-			"maximumPayment": 50000
+			"undefined": "https://drive.google.com/open?id=1qMT0oQxANsHzgT1sWadL2pOFxcELalh8"
 		},
 		{
 			"source": "Lu Biao",
 			"target": "Mar-a-Lago RNC Lunch",
 			"relationship": "attended",
-			"costWhereApplicable": "$2,700- $50,000",
-			"minimumPayment": 2700,
-			"maximumPayment": 50000
+			"costWhereApplicable": "$2,700- $50,000"
 		},
 		{
 			"source": "Zhu Ruining",
 			"target": "Mar-a-Lago RNC Lunch",
 			"relationship": "attended",
-			"costWhereApplicable": "$2,700- $50,000",
-			"minimumPayment": 2700,
-			"maximumPayment": 50000
+			"costWhereApplicable": "$2,700- $50,000"
 		},
 		{
 			"source": "Yuan Yue",
 			"target": "Mar-a-Lago RNC Lunch",
 			"relationship": "attended",
-			"costWhereApplicable": "$2,700- $50,000",
-			"minimumPayment": 2700,
-			"maximumPayment": 50000
+			"costWhereApplicable": "$2,700- $50,000"
 		},
 		{
 			"source": "Xianqin Qu ",
 			"target": "Mar-a-Lago Safari Night 2018",
 			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $10,000",
-			"minimumPayment": 1000,
-			"maximumPayment": 10000
+			"costWhereApplicable": "$1,000 - $10,000"
 		},
 		{
 			"source": "Meng Jinhong",
 			"target": "Mar-a-Lago Safari Night 2018",
 			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $10,000",
-			"minimumPayment": 1000,
-			"maximumPayment": 10000
+			"costWhereApplicable": "$1,000 - $10,000"
 		},
 		{
 			"source": "Liting Xiong",
 			"target": "Mar-a-Lago Safari Night 2018",
 			"relationship": "attended",
 			"costWhereApplicable": "$1,000 - $10,000",
-			"minimumPayment": 1000,
-			"maximumPayment": 10000
+			"undefined": "cindy yang's wechat"
 		},
 		{
 			"source": "Zijing (the Martian) Xu",
 			"target": "RNC Cipriani Breakfast",
 			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700",
-			"minimumPayment": 1000,
-			"maximumPayment": 2700
+			"costWhereApplicable": "$1,000 - $2,700"
 		},
 		{
 			"source": "Li Jing",
 			"target": "RNC Cipriani Breakfast",
 			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700",
-			"minimumPayment": 1000,
-			"maximumPayment": 2700
+			"costWhereApplicable": "$1,000 - $2,700"
 		},
 		{
 			"source": "Jie Yang",
 			"target": "RNC Cipriani Breakfast",
 			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700",
-			"minimumPayment": 1000,
-			"maximumPayment": 2700
+			"costWhereApplicable": "$1,000 - $2,700"
 		},
 		{
 			"source": "Lu Liang",
 			"target": "RNC Cipriani Breakfast",
 			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700",
-			"minimumPayment": 1000,
-			"maximumPayment": 2700
+			"costWhereApplicable": "$1,000 - $2,700"
 		},
 		{
 			"source": "Shanjie Li",
 			"target": "RNC Cipriani Breakfast",
 			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700",
-			"minimumPayment": 1000,
-			"maximumPayment": 2700
+			"costWhereApplicable": "$1,000 - $2,700"
 		},
 		{
 			"source": "Lolita Zhao Qiang",
 			"target": "RNC Cipriani Breakfast",
 			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700",
-			"minimumPayment": 1000,
-			"maximumPayment": 2700
+			"costWhereApplicable": "$1,000 - $2,700"
 		},
 		{
 			"source": "Zubin Gong",
 			"target": "RNC Cipriani Breakfast",
 			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700",
-			"minimumPayment": 1000,
-			"maximumPayment": 2700
+			"costWhereApplicable": "$1,000 - $2,700"
 		},
 		{
 			"source": "Lu Zihan",
 			"target": "RNC Cipriani Breakfast",
 			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700",
-			"minimumPayment": 1000,
-			"maximumPayment": 2700
+			"costWhereApplicable": "$1,000 - $2,700"
 		},
 		{
 			"source": "Tong Jingjing",
 			"target": "RNC Cipriani Breakfast",
 			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700",
-			"minimumPayment": 1000,
-			"maximumPayment": 2700
+			"costWhereApplicable": "$1,000 - $2,700"
 		},
 		{
 			"source": "Feng Yahua",
 			"target": "RNC Cipriani Breakfast",
 			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700",
-			"minimumPayment": 1000,
-			"maximumPayment": 2700
+			"costWhereApplicable": "$1,000 - $2,700"
 		},
 		{
 			"source": "Wu Hao",
 			"target": "RNC Cipriani Breakfast",
 			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700",
-			"minimumPayment": 1000,
-			"maximumPayment": 2700
+			"costWhereApplicable": "$1,000 - $2,700"
 		},
 		{
 			"source": "Huang Yacun",
 			"target": "RNC Cipriani Breakfast",
 			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700",
-			"minimumPayment": 1000,
-			"maximumPayment": 2700
+			"costWhereApplicable": "$1,000 - $2,700"
 		},
 		{
 			"source": "Jiang Rui",
 			"target": "RNC Cipriani Breakfast",
 			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700",
-			"minimumPayment": 1000,
-			"maximumPayment": 2700
+			"costWhereApplicable": "$1,000 - $2,700"
 		},
 		{
 			"source": "Ren Meihua",
 			"target": "RNC Cipriani Breakfast",
 			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700",
-			"minimumPayment": 1000,
-			"maximumPayment": 2700
+			"costWhereApplicable": "$1,000 - $2,700"
 		},
 		{
 			"source": "Yun Li",
 			"target": "RNC Cipriani Breakfast",
 			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700",
-			"minimumPayment": 1000,
-			"maximumPayment": 2700
+			"costWhereApplicable": "$1,000 - $2,700"
 		},
 		{
 			"source": "Lou Li",
 			"target": "RNC Cipriani Breakfast",
 			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700",
-			"minimumPayment": 1000,
-			"maximumPayment": 2700
+			"costWhereApplicable": "$1,000 - $2,700"
 		},
 		{
 			"source": "Xianqin Qu ",
 			"target": "RNC Cipriani Breakfast",
 			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700",
-			"minimumPayment": 1000,
-			"maximumPayment": 2700
+			"costWhereApplicable": "$1,000 - $2,700"
 		},
 		{
 			"source": "Dr. Charles Lee",
 			"target": "Mar-a-Lago Friends of Israel",
 			"relationship": "attended",
-			"costWhereApplicable": "$750 - $75,000",
-			"minimumPayment": 750,
-			"maximumPayment": 75000
+			"costWhereApplicable": "$750 - $75,000"
 		},
 		{
 			"source": "Dr. Charles Lee",
 			"target": "Mar-a-Lago Safari Night 2018",
 			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $10,000",
-			"minimumPayment": 1000,
-			"maximumPayment": 10000
+			"costWhereApplicable": "$1,000 - $10,000"
 		},
 		{
 			"source": "Dr. Charles Lee",
 			"target": "RNC Cipriani Breakfast",
 			"relationship": "attended",
-			"costWhereApplicable": 2700,
-			"minimumPayment": 2700,
-			"maximumPayment": 2700
+			"costWhereApplicable": 2700
+		},
+		{
+			"source": "Dr. Charles Lee",
+			"target": "Mar-a-Lago RNC Lunch",
+			"relationship": "attended",
+			"costWhereApplicable": "$2,700- $50,000"
 		},
 		{
 			"source": "Trump Victory",
@@ -619,33 +573,23 @@
 			"source": "Lu Liang",
 			"target": "RNC Cipriani Breakfast",
 			"relationship": "took official Trump photo at",
-			"costWhereApplicable": 50000,
-			"minimumPayment": 50000,
-			"maximumPayment": 50000
+			"costWhereApplicable": 50000
 		},
 		{
 			"source": "Zijing (the Martian) Xu",
 			"target": "RNC Cipriani Breakfast",
 			"relationship": "took official Trump photo at",
-			"costWhereApplicable": 50000,
-			"minimumPayment": 50000,
-			"maximumPayment": 50000
+			"costWhereApplicable": 50000
 		},
 		{
-			"source": "unknown businessman 1",
-			"target": "Mar-a-Lago Safari Night 2018",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $10,000",
-			"minimumPayment": 1000,
-			"maximumPayment": 10000
+			"source": "Yujing Zhang",
+			"target": "Safari Night 2019",
+			"relationship": "tried to attend"
 		},
 		{
-			"source": "unknown businessman 2",
-			"target": "Mar-a-Lago Safari Night 2018",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $10,000",
-			"minimumPayment": 1000,
-			"maximumPayment": 10000
+			"source": "Safari Night 2019",
+			"target": "The Trump Organization",
+			"relationship": "would have paid"
 		}
 	]
 }
