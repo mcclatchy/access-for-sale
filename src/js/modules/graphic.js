@@ -3,15 +3,15 @@ import data from './data.json';
 import imgs from '../../img/*.jpg';
 
 class Viz {
-  constructor(width, winHeight) {
+  constructor(width, height) {
     this.width = width;
-    this.height = winHeight;
+    this.height = height;
   }
   renderGraphic() {
     const links = data.links.map(d => Object.create(d));
     const nodes = data.nodes.map(d => Object.create(d));
 
-    const nodeRadius = 12;
+    const nodeRadius = this.radius;
     const linkDistance = 35;
 
     const groupData = [
@@ -21,9 +21,6 @@ class Viz {
       { name: 'president', mx: 2 }
     ];
 
-    const width = this.width;
-    const height = this.height;
-
     const simulation = d3
       .forceSimulation(nodes)
       .force(
@@ -32,24 +29,18 @@ class Viz {
           .forceLink(links)
           .distance(linkDistance)
           .id(d => d.id)
-          .strength(1)
       )
       .force(
         'charge',
-        d3
-          .forceManyBody()
-          .strength(-200)
-          // .distanceMax(300)
+        d3.forceManyBody().strength(-300)
+        // .distanceMax(300)
       )
-      .force('collide', d3.forceCollide(nodeRadius))
-      // .force('center', d3.forceCenter(width / 2, height / 2))
-      .force('x', d3.forceX(width / 2))
-      .force('y', d3.forceY(height / 2));
+      .force('collide', d3.forceCollide().radius(d => getRadius(d.group)));
 
-    const svg = d3
-      .select('.svg')
-      .attr('width', width)
-      .attr('height', height);
+    this.force = simulation;
+    this.svg = d3.select('.svg');
+
+    const svg = this.svg
 
     const defs = svg.append('defs');
 
@@ -62,19 +53,6 @@ class Viz {
       .attr('r', d => nodeRadius * d.mx);
 
     const g = svg.append('g');
-
-    const handleZoom = d3
-      .zoom()
-      .scaleExtent([1, 10])
-      .on('zoom', zoomed);
-
-    svg.call(handleZoom);
-
-    // handleZoom.scaleTo(g, 1.5);
-
-    function zoomed() {
-      g.attr('transform', d3.event.transform);
-    }
 
     const linkG = g
       .append('g')
@@ -112,11 +90,11 @@ class Viz {
       .attr('data-name', d => d.id)
       .attr('class', d => `img-group ${d.group}`)
       .attr('fill', 'none')
-      .call(drag(simulation))
+      .call(drag(simulation));
 
     const cir = node
       .append('circle')
-      .attr('r', d => groupCheck(d.group))
+      .attr('r', d => getRadius(d.group))
       .attr('stroke', '#333')
       .attr('stroke-width', 2);
 
@@ -129,10 +107,10 @@ class Viz {
         imgs[d.photo] !== undefined ? imgs[d.photo] : imgs['Unknown']
       )
       .attr('clip-path', d => `url(#${d.group}-clip)`)
-      .attr('width', d => groupCheck(d.group) * 2)
-      .attr('height', d => groupCheck(d.group) * 2)
-      .attr('x', d => groupCheck(d.group) * -1)
-      .attr('y', d => groupCheck(d.group) * -1);
+      .attr('width', d => getRadius(d.group) * 2)
+      .attr('height', d => getRadius(d.group) * 2)
+      .attr('x', d => getRadius(d.group) * -1)
+      .attr('y', d => getRadius(d.group) * -1);
 
     const tooltip = d3.select('.tooltip');
 
@@ -149,19 +127,26 @@ class Viz {
 
     node.on('touchend mouseleave', () => tooltip.style('visibility', 'hidden'));
 
-    let trump = node.filter(d => d.id == 'Donald J. Trump').datum();
-    let tVict = node.filter(d => d.id == 'Trump Victory').datum();
-    let tOrg = node.filter(d => d.id == 'The Trump Organization').datum();
+    this.updateGraphic(this.width, this.height);
 
-    simulation.on('tick', function() {
-      trump.fy = height / 8;
+    simulation.on('tick', ticked);
+
+    let width = window.innerWidth;
+    let height = 600;
+
+    function ticked() {
+      let trump = node.filter(d => d.id == 'Donald J. Trump').datum();
+      let tVict = node.filter(d => d.id == 'Trump Victory').datum();
+      let tOrg = node.filter(d => d.id == 'The Trump Organization').datum();
+
+      trump.fy = 30;
       trump.fx = width / 2;
 
-      tVict.fy = height / 4;
-      tVict.fx = (width / 2) + (nodeRadius * 6);
+      tVict.fy = height / 8;
+      tVict.fx = width / 2 + nodeRadius * 6;
 
-      tOrg.fy = height / 4;
-      tOrg.fx = (width / 2) - (nodeRadius * 6);
+      tOrg.fy = height / 8;
+      tOrg.fx = width / 2 - nodeRadius * 6;
 
       line.attr(
         'd',
@@ -176,15 +161,20 @@ class Viz {
       );
       node.attr(
         'transform',
-        d => `translate(${computeMinMax(d.x, width)},${computeMinMax(d.y, height)})`
+        d =>
+          `translate(${computeMinMax(d.x, width)},${computeMinMax(
+            d.y,
+            // eslint-disable-next-line no-undef
+            height
+          )})`
       );
-    });
-
-    function computeMinMax(value, reference) {
-      return Math.max(nodeRadius, Math.min(reference - nodeRadius, value))
     }
 
-    function groupCheck(group) {
+    function computeMinMax(value, reference) {
+      return Math.max(nodeRadius, Math.min(reference - nodeRadius, value));
+    }
+
+    function getRadius(group) {
       let res;
       switch (group) {
         case 'guest':
@@ -203,6 +193,18 @@ class Viz {
       return res * nodeRadius;
     }
   }
+  updateGraphic(width, height) {
+    this.xForce = d3.forceX(width / 2);
+    this.yForce = d3.forceY(height / 2);
+
+    this.width = width;
+    this.height = height;
+
+    this.svg.attr('width', width).attr('height', height);
+
+    this.simulation.force('x', d3.forceX(width / 2))
+    this.simulation.force('y', d3.forceY(height / 2))
+  }
 }
 
 function drag(simulation) {
@@ -219,14 +221,15 @@ function drag(simulation) {
 
   function dragended(d) {
     if (!d3.event.active) simulation.alphaTarget(0);
-    d.fx = d.x;
-    d.fy = d.y;
+    d.fx = null;
+    d.fy = null;
   }
 
-  return d3.drag()
-    .on("start", dragstarted)
-    .on("drag", dragged)
-    .on("end", dragended);
+  return d3
+    .drag()
+    .on('start', dragstarted)
+    .on('drag', dragged)
+    .on('end', dragended);
 }
 
 export { Viz };
