@@ -128,7 +128,7 @@ class Viz {
       .attr('r', d => getRadius(d.group))
       .attr('stroke', '#333')
       .attr('stroke-width', 2);
-
+      
     const img = node
       .append('image')
       .attr('xlink:href', d =>
