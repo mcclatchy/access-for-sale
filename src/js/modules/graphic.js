@@ -1,4 +1,10 @@
-import * as d3 from 'd3';
+const d3 = Object.assign(
+  {},
+  require('d3-selection'),
+  require('d3-force'),
+  require('d3-zoom')
+);
+import { event as currentEvent } from 'd3-selection';
 import data from './data.json';
 import imgs from '../../img/*.jpg';
 
@@ -14,11 +20,21 @@ class Viz {
     let nodeRadius = 20;
     let linkDistance = 90;
     let chargeStr = -500;
+    let xDenom = 2;
+    let xStr = 0;
+    let yDenom = 0.9;
+    let yStr = 0.15;
+
+    let hlColor = '#18aef9';
 
     if (window.innerWidth < 600) {
-        nodeRadius = 15;
-        linkDistance = 45;
-        chargeStr = -300
+      nodeRadius = 15;
+      linkDistance = 50;
+      chargeStr = -370;
+      xDenom = 2.1;
+      xStr = 0.08;
+      yDenom = .76;
+      yStr = 0.15;
     }
 
     const groupData = [
@@ -41,13 +57,13 @@ class Viz {
           .id(d => d.id)
       )
       .force('charge', d3.forceManyBody().strength(chargeStr))
-      .force(
-        'collide',
-        d3.forceCollide().radius(d => getRadius(d.group))
-      )
-      // .force('center', d3.forceCenter(width / 2, height / 2))
-      .force('x', d3.forceX(width /2.2))
-      .force('y', d3.forceY(height * .75));
+      .force('collide', d3.forceCollide().radius(d => getRadius(d.group)))
+      .force('x', d3.forceX(width / xDenom).strength(xStr))
+      .force('y', d3.forceY(height * yDenom).strength(yStr));
+
+    if (window.innerWidth >= 600) {
+      simulation.force('center', d3.forceCenter(width / 2, height / 2));
+    }
 
     const svg = d3
       .select('.svg')
@@ -68,8 +84,8 @@ class Viz {
 
     const handleZoom = d3
       .zoom()
-      .scaleExtent([3/4, 8])
-      .on('zoom', () => g.attr('transform', d3.event.transform));
+      .scaleExtent([3 / 4, 8])
+      .on('zoom', () => g.attr('transform', currentEvent.transform));
 
     svg.call(handleZoom);
 
@@ -94,8 +110,8 @@ class Viz {
       .append('tspan')
       .attr('class', 'link-arrow')
       .attr('fill', '#333')
-      .text('→')
-      .attr('dy', 8);
+      .text(d => d.source.id == "Yujing Zhang" | d.source.id == "Safari Night 2019" ? '' : '→')
+      .attr('dy', 8.75);
 
     const node = g
       .append('g')
@@ -104,8 +120,8 @@ class Viz {
       .join('g')
       .attr('data-name', d => d.id)
       .attr('class', d => `img-group ${d.group}`)
-      .attr('fill', 'none')
-      // .call(drag(simulation));
+      .attr('fill', 'none');
+    // .call(drag(simulation));
 
     const cir = node
       .append('circle')
@@ -134,43 +150,55 @@ class Viz {
       tooltip.select('.tooltip__name').text(d.id);
 
       tooltip
-        .style('top', `${d3.event.pageY - 10}px`)
-        .style('left', `${d3.event.pageX + 10}px`);
-      
+        .style('top', `${currentEvent.pageY - 10}px`)
+        .style('left', `${currentEvent.pageX + 10}px`);
     });
 
     linkG.on('touchmove mousemove', function(d) {
       tooltip.style('visibility', 'visible');
-      tooltip.select('.tooltip__name').text("");
-      tooltip.select('.tooltip__about').text(d.relationship);
+      tooltip.select('.tooltip__name').text('');
       tooltip
-        .style('top', `${d3.event.pageY - 10}px`)
-        .style('left', `${d3.event.pageX + 10}px`);    
+        .select('.tooltip__about')
+        .html(`${d.source.id} ${d.relationship} ${d.target.id}`);
+      tooltip
+        .style('top', `${currentEvent.pageY - 10}px`)
+        .style('left', `${currentEvent.pageX + 10}px`);
 
-      d3.select(this).select("path").style("stroke", "#31409f").style('stroke-opacity', 1);
+      d3.select(this)
+        .select('path')
+        .style('stroke', hlColor)
+        .style('stroke-opacity', 1)
+        .style('stroke-width', '3');
 
-      d3.selectAll(`g[data-name="${d.source.id}"] > circle, g[data-name="${d.target.id}"] > circle`)
-        .style('stroke', '#31409f')
-        .style('stroke-width', "6");
+      d3.selectAll(
+        `g[data-name="${d.source.id}"] > circle, g[data-name="${
+          d.target.id
+        }"] > circle`
+      )
+        .style('stroke', hlColor)
+        .style('stroke-width', '6');
     });
 
     node.on('touchend mouseleave', () => tooltip.style('visibility', 'hidden'));
 
     linkG.on('touchend mouseleave', function(d) {
-      tooltip.style('visibility', 'hidden')
+      tooltip.style('visibility', 'hidden');
 
-      d3.select(this)
+      d3
+        .select(this)
         .select('path')
-        .style('stroke', '#333')
-        .style('stroke-opacity', 0.6);
+        .node().style = '';
 
-      d3.selectAll(`g[data-name="${d.source.id}"] > circle, g[data-name="${d.target.id}"] > circle`)
+      d3.selectAll(
+        `g[data-name="${d.source.id}"] > circle, g[data-name="${
+          d.target.id
+        }"] > circle`
+      )
         .style('stroke', '#333')
-        .style('stroke-width', "2");
-
+        .style('stroke-width', '2');
     });
 
-    let pres = node.filter(d => d.group == "president").datum();
+    let pres = node.filter(d => d.group == 'president').datum();
     let tVict = node.filter(d => d.id == 'Trump Victory').datum();
     let tOrg = node.filter(d => d.id == 'The Trump Organization').datum();
 
@@ -200,7 +228,7 @@ class Viz {
         },
         '*'
       );
-    })
+    });
 
     function getRadius(group) {
       let res;

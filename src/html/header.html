@@ -1,0 +1,50 @@
+<style>
+  .ad.visible-xs,
+  div#story-cta-widget,
+  p:empty {
+    display: none;
+  }
+  .embed-infographic:first-of-type {
+    margin-top: 0 !important;
+  }
+  .embed-infographic:first-of-type > header {
+    padding: 0;
+  }
+  figure.immersive .content {
+    display: none !important;
+  }
+</style>
+<header class="header">
+  <h3 class="h1">
+    Who has gained access to President Trump and Mar-a-Lago through Cindy Yang?
+  </h3>
+  <div class="bio">
+    <div>
+      <div>
+        <p class="byline">
+          <a href="mailto:aalbright@mcclatchy.com"> By Aaron Albright</a>,
+        </p>
+        <p class="byline">
+          <a href="mailto:sblaskey@miamiherald.com"> Sarah Blaskey</a>,
+        </p>
+        <p class="byline">
+          <a href="mailto:costroff@miamiherald.com"> Caitlin Ostroff</a>, and
+        </p>
+        <p class="byline">
+          <a href="mailto:nnehamas@miamiherald.com"> Nicholas Nehamas</a>
+        </p>
+      </div>
+      <div>
+        <time id="publish_date">April 08, 2019 01:00 PM<span></span></time>
+        <time id="update_date"></time>
+      </div>
+    </div>
+  </div>
+</header>
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+    var seriesNav = document.querySelector('.series-nav.package');
+    var endnote = document.querySelector('#nativoArticlePage');
+    endnote.parentNode.insertBefore(seriesNav, endnote);
+  });
+</script>

@@ -25,13 +25,24 @@ p {
 
 .link-arrow {
   text-anchor: middle;
-  font: 22px sans-serif;
+  font: 24px "Lucida Grande",sans-serif;
   user-select: none;
 }
 
 .interactive {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+.interactive__info {
+  max-width: 720px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  p {
+    margin-bottom: 0;
+  }
 }
 
 .interactive__graphic {
@@ -41,20 +52,24 @@ p {
 }
 
 .interactive__legend {
-  text-align: left;
-  position: absolute;
-  left: 0;
+  margin: 0 auto;
+  max-width: 720px;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
   background: rgba(255, 255, 255, 0.8);
   pointer-events: none;
   p {
-    margin: 5px 0;
+    margin: 5px 15px;
     font-size: 14px;
+    color: #707070;
   }
   span {
     font-size: 2em;
     vertical-align: middle;
     line-height: 1;
     font-family: sans-serif;
+    color: #222;
   }
   img {
     width: 30px;
@@ -64,13 +79,6 @@ p {
     padding: 2.5px;
     padding-left: 3px;
     background: #000;
-  }
-}
-
-@media (orientation: portrait) {
-  .interactive__legend {
-    position: relative;
-    margin: 0 15px;
   }
 }
 
@@ -90,4 +98,12 @@ p {
 
 .tooltip__name {
   font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .interactive__legend {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }

@@ -1,0 +1,69 @@
+<style>
+  .interactive-link {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #707070;
+    margin: 0 15px 15px;
+  }
+  .interactive-link > * {
+    display: block;
+    flex: 0 1 100%;
+  }
+  .story-template
+    section[role='main'].container.story
+    .content-body
+    .interactive-link
+    > h3 {
+    font-family: 'McClatchy Serif', serif;
+    text-transform: none;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  .interactive-link figure {
+    position: relative;
+    margin: 0;
+  }
+  .interactive-link figcaption {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font: 600 14px/1.2em 'McClatchy Sans', sans-serif;
+    background: #373737;
+    padding: 5px 10px 3px;
+  }
+  .interactive-link img {
+    width: 100%;
+  }
+  .interactive-link:hover > h3 {
+    text-decoration: underline;
+  }
+  @media (min-width: 600px) {
+    .interactive-link {
+      padding: 0 0 30px !important;
+      margin: 0 0 30px;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .interactive-link figure {
+      margin-right: 15px;
+    }
+    .interactive-link > * {
+      flex: 0 1 50%;
+    }
+  }
+</style>
+<a
+  class="interactive-link"
+  href="https://www.miamiherald.com/news/politics-government/article226751854.html"
+  ><figure>
+    <img
+      alt="Interactive image link"
+      src="https://media.miamiherald.com/static/media/projects/2019/yang-embed-art/graphic-teaser.jpg"
+    />
+    <figcaption>GRAPHIC</figcaption>
+  </figure>
+  <h3>Who has gained access to President Trump and Mar-a-Lago through Cindy Yang?</h3></a>
