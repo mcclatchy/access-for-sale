@@ -18,22 +18,22 @@ class Viz {
     const nodes = data.nodes.map(d => Object.create(d));
 
     let nodeRadius = 20;
-    let linkDistance = 90;
-    let chargeStr = -500;
-    let xDenom = 2;
-    let xStr = 0;
-    let yDenom = 0.9;
-    let yStr = 0.15;
+    let linkDistance = 60;
+    let chargeStr = -550;
+    let xDenom = 2.2;
+    let xStr = 0.02;
+    let yDenom = .85;
+    let yStr = 0.25;
 
     let hlColor = '#18aef9';
 
     if (window.innerWidth < 600) {
       nodeRadius = 15;
-      linkDistance = 50;
-      chargeStr = -370;
-      xDenom = 2.1;
-      xStr = 0.08;
-      yDenom = .76;
+      linkDistance = 45;
+      chargeStr = -470;
+      xDenom = 2.2;
+      xStr = 0.09;
+      yDenom = .8;
       yStr = 0.15;
     }
 
@@ -217,17 +217,6 @@ class Viz {
         d => `M ${d.source.x} ${d.source.y} L ${d.target.x} ${d.target.y}`
       );
       node.attr('transform', d => `translate(${d.x},${d.y})`);
-    });
-
-    simulation.on('end', () => {
-      window.parent.postMessage(
-        {
-          sentinel: 'amp',
-          type: 'embed-size',
-          height: document.body.scrollHeight
-        },
-        '*'
-      );
     });
 
     function getRadius(group) {

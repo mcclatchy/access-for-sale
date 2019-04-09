@@ -196,12 +196,6 @@
 			"id": "Yun Li",
 			"group": "guest",
 			"photo": "YunLi",
-			"tooltip": "Chairman of the Meyer Alliance Cloud Information"
-		},
-		{
-			"id": "Lou Li",
-			"group": "guest",
-			"photo": "Unknown",
 			"tooltip": "Occupation: Unknown."
 		},
 		{
@@ -221,189 +215,182 @@
 			"group": "guest",
 			"photo": "YujingZhang",
 			"tooltip": "Chinese woman arrested attempting to enter Mar-a-Lago for Cindy Yang's event carrying various electronics, including a jump drive containing malware."
+		},
+		{
+			"id": "Jie Yong",
+			"group": "guest",
+			"photo": "Unknown",
+			"tooltip": "Received \"U.S. China Friendship Ambassador\" award from Dr. Charles Lee's group. Occupation: Unknown. "
+		},
+		{
+			"id": "Kui Zhang ",
+			"group": "guest",
+			"photo": "KuiZhang",
+			"tooltip": "Awarded U.S.-China Friendship Ambassador award by Dr. Charles Lee. Occupation: Unknown."
+		},
+		{
+			"id": "Lou Li",
+			"group": "guest",
+			"photo": "LolitaZhaoQiang",
+			"tooltip": "Occupation: Unknown."
+		},
+		{
+			"id": "Jie Zhang",
+			"group": "guest",
+			"photo": "JieZhang",
+			"tooltip": "Occupation: Unknown."
 		}
 	],
 	"links": [
 		{
 			"source": "Lei Yu",
 			"target": "Mar-a-Lago Friends of Israel",
-			"relationship": "attended",
-			"costWhereApplicable": "$750 - $75,000"
+			"relationship": "attended"
 		},
 		{
 			"source": "Sun Ye",
 			"target": "Mar-a-Lago New Year's Eve",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000"
+			"relationship": "attended"
 		},
 		{
 			"source": "Huachu Tang",
 			"target": "Mar-a-Lago New Year's Eve",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000"
+			"relationship": "attended"
 		},
 		{
 			"source": "Yuehong Yang",
 			"target": "Mar-a-Lago New Year's Eve",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000"
+			"relationship": "attended"
 		},
 		{
 			"source": "Lu Kunning",
 			"target": "Mar-a-Lago RNC Lunch",
-			"relationship": "attended",
-			"costWhereApplicable": "$2,700- $50,000"
+			"relationship": "attended"
 		},
 		{
 			"source": "Lu Biao",
 			"target": "Mar-a-Lago RNC Lunch",
-			"relationship": "attended",
-			"costWhereApplicable": "$2,700- $50,000"
+			"relationship": "attended"
 		},
 		{
 			"source": "Zhu Ruining",
 			"target": "Mar-a-Lago RNC Lunch",
-			"relationship": "attended",
-			"costWhereApplicable": "$2,700- $50,000"
+			"relationship": "attended"
 		},
 		{
 			"source": "Yuan Yue",
 			"target": "Mar-a-Lago RNC Lunch",
-			"relationship": "attended",
-			"costWhereApplicable": "$2,700- $50,000"
+			"relationship": "attended"
 		},
 		{
 			"source": "Xianqin Qu ",
 			"target": "Mar-a-Lago Safari Night 2018",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $10,000"
+			"relationship": "attended"
 		},
 		{
 			"source": "Meng Jinhong",
 			"target": "Mar-a-Lago Safari Night 2018",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $10,000"
+			"relationship": "attended"
 		},
 		{
 			"source": "Liting Xiong",
 			"target": "Mar-a-Lago Safari Night 2018",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $10,000",
-			"undefined": "cindy yang's wechat"
+			"relationship": "attended"
 		},
 		{
 			"source": "Zijing Xu",
 			"target": "RNC Cipriani Breakfast",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700"
+			"relationship": "attended"
 		},
 		{
 			"source": "Li Jing",
 			"target": "RNC Cipriani Breakfast",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700"
+			"relationship": "attended"
 		},
 		{
 			"source": "Jie Yang",
 			"target": "RNC Cipriani Breakfast",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700"
+			"relationship": "attended"
 		},
 		{
 			"source": "Liang Lu",
 			"target": "RNC Cipriani Breakfast",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700"
+			"relationship": "attended"
 		},
 		{
 			"source": "Shanjie Li",
 			"target": "RNC Cipriani Breakfast",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700"
+			"relationship": "attended"
 		},
 		{
 			"source": "Zubin Gong",
 			"target": "RNC Cipriani Breakfast",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700"
+			"relationship": "attended"
 		},
 		{
 			"source": "Lu Zihan",
 			"target": "RNC Cipriani Breakfast",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700"
+			"relationship": "attended"
 		},
 		{
 			"source": "Tong Jingjing",
 			"target": "RNC Cipriani Breakfast",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700"
+			"relationship": "attended"
 		},
 		{
 			"source": "Feng Yahua",
 			"target": "RNC Cipriani Breakfast",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700"
+			"relationship": "attended"
 		},
 		{
 			"source": "Wu Hao",
 			"target": "RNC Cipriani Breakfast",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700"
+			"relationship": "attended"
 		},
 		{
 			"source": "Huang Yacun",
 			"target": "RNC Cipriani Breakfast",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700"
+			"relationship": "attended"
 		},
 		{
 			"source": "Jiang Rui",
 			"target": "RNC Cipriani Breakfast",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700"
+			"relationship": "attended"
 		},
 		{
 			"source": "Ren Meihua",
 			"target": "RNC Cipriani Breakfast",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700"
+			"relationship": "attended"
 		},
 		{
 			"source": "Yun Li",
 			"target": "RNC Cipriani Breakfast",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700"
+			"relationship": "attended"
 		},
 		{
 			"source": "Lou Li",
 			"target": "RNC Cipriani Breakfast",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700"
+			"relationship": "attended"
 		},
 		{
 			"source": "Xianqin Qu ",
 			"target": "RNC Cipriani Breakfast",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $2,700"
+			"relationship": "attended"
 		},
 		{
 			"source": "Dr. Charles Lee",
 			"target": "Mar-a-Lago Friends of Israel",
-			"relationship": "attended",
-			"costWhereApplicable": "$750 - $75,000"
+			"relationship": "attended"
 		},
 		{
 			"source": "Dr. Charles Lee",
 			"target": "Mar-a-Lago Safari Night 2018",
-			"relationship": "attended",
-			"costWhereApplicable": "$1,000 - $10,000"
+			"relationship": "attended"
 		},
 		{
 			"source": "Dr. Charles Lee",
 			"target": "RNC Cipriani Breakfast",
-			"relationship": "attended",
-			"costWhereApplicable": "$2,700"
+			"relationship": "attended"
 		},
 		{
 			"source": "Trump Victory",
@@ -418,8 +405,7 @@
 		{
 			"source": "Mar-a-Lago Safari Night 2018",
 			"target": "The Trump Organization",
-			"relationship": "paid to",
-			"costWhereApplicable": "$40,000"
+			"relationship": "paid $40,000 to"
 		},
 		{
 			"source": "Mar-a-Lago Friends of Israel",
@@ -434,8 +420,7 @@
 		{
 			"source": "Mar-a-Lago RNC Lunch",
 			"target": "The Trump Organization",
-			"relationship": "paid to",
-			"costWhereApplicable": "$210,000"
+			"relationship": "paid $210,000 to"
 		},
 		{
 			"source": "RNC Cipriani Breakfast",
@@ -450,14 +435,12 @@
 		{
 			"source": "Liang Lu",
 			"target": "RNC Cipriani Breakfast",
-			"relationship": "took official Trump photo at",
-			"costWhereApplicable": "$50,000"
+			"relationship": "took official Trump photo at"
 		},
 		{
 			"source": "Zijing Xu",
 			"target": "RNC Cipriani Breakfast",
-			"relationship": "took official Trump photo at",
-			"costWhereApplicable": "$50,000"
+			"relationship": "took official Trump photo at"
 		},
 		{
 			"source": "Yujing Zhang",
@@ -468,6 +451,21 @@
 			"source": "Safari Night 2019",
 			"target": "The Trump Organization",
 			"relationship": "would have paid"
+		},
+		{
+			"source": "Jie Yong",
+			"target": "Mar-a-Lago Friends of Israel",
+			"relationship": "attended"
+		},
+		{
+			"source": "Kui Zhang ",
+			"target": "Mar-a-Lago Friends of Israel",
+			"relationship": "attended"
+		},
+		{
+			"source": "Jie Zhang",
+			"target": "Mar-a-Lago New Year's Eve",
+			"relationship": "attended"
 		}
 	]
 }
