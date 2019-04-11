@@ -2,20 +2,31 @@ import { Viz } from './modules/graphic';
 
 const container = document.querySelector('.interactive');
 
-const mq = window.matchMedia('(orientation: portrait)');
-mq.addListener(handleOrientationChange);
+// const mq = window.matchMedia('(orientation: portrait)');
+// mq.addListener(handleOrientationChange);
 
 let viz;
 let height;
 
 function init() {
   let width = container.clientWidth;
+
+  if (window.innerWidth < 768) {
+    height = 500;
+  } else {
+    height = 700;
+  }
   viz = new Viz(width, height);
   viz.destroyGraphic();
   viz.renderGraphic();
 
   const resizer = () => {
     if (width !== container.clientWidth) {
+      if (window.innerWidth < 768) {
+        height = 500;
+      } else {
+        height = 700;
+      }
       viz = new Viz(container.clientWidth, height);
       viz.destroyGraphic();
       viz.renderGraphic();
@@ -38,7 +49,7 @@ function init() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  handleOrientationChange(mq);
+  // handleOrientationChange(mq);
   init();
   sendHeight();
 });
@@ -55,9 +66,9 @@ function sendHeight() {
 }
 
 function handleOrientationChange(e) {
-    if (e.matches) {
-        height = 500;
-    } else {
-        height = 700;
-    }
+  if (e.matches) {
+    height = 500;
+  } else {
+    height = 700;
+  }
 }

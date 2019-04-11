@@ -25,7 +25,7 @@ p {
 
 .link-arrow {
   text-anchor: middle;
-  font: 24px "Lucida Grande",sans-serif;
+  font: 24px 'Lucida Grande', sans-serif;
   user-select: none;
 }
 
@@ -100,10 +100,29 @@ p {
   font-weight: bold;
 }
 
+.tooltip__close {
+  text-decoration: underline;
+  margin-top: 5px;
+}
+
 @media (max-width: 600px) {
   .interactive__legend {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+  .tooltip {
+    top: 10% !important;
+    left: 1.5% !important;
+    right: 1.5%;
+    max-width: none;
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0.95);;
+  }
+}
+
+@media (min-width: 601px) {
+  .tooltip__close {
+    display: none;
   }
 }

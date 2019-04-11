@@ -82,9 +82,13 @@ class Viz {
 
     const g = svg.append('g');
 
+    let extent = [1, 8];
+
+    if (window.innerWidth < 767) extent = [.7, 8];
+
     const handleZoom = d3
       .zoom()
-      .scaleExtent([3 / 4, 8])
+      .scaleExtent(extent)
       .on('zoom', () => g.attr('transform', currentEvent.transform));
 
     svg.call(handleZoom);
@@ -142,7 +146,9 @@ class Viz {
 
     const tooltip = d3.select('.tooltip');
 
-    tooltip.style('position', 'absolute').style('visibility', 'hidden');
+    tooltip.select('.tooltip__close').on('click',function () {
+      tooltip.style('visibility', 'hidden')
+    })
 
     node.on('touchmove mousemove', function(d) {
       tooltip.style('visibility', 'visible');
