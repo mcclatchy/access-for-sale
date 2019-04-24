@@ -1,4 +1,8 @@
-import * as d3 from 'd3';
+const d3 = Object.assign(
+  {},
+  require('d3-selection'),
+  require('d3-drag')
+);
 
 function drag(simulation) {
     function dragstarted(d) {
@@ -14,8 +18,8 @@ function drag(simulation) {
 
     function dragended(d) {
         if (!d3.event.active) simulation.alphaTarget(0);
-        d.fx = null;
-        d.fy = null;
+        d.fx = d3.event.x;
+        d.fy = d3.event.y;
     }
 
     return d3

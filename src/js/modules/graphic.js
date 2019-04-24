@@ -2,7 +2,8 @@ const d3 = Object.assign(
   {},
   require('d3-selection'),
   require('d3-force'),
-  require('d3-zoom')
+  require('d3-zoom'),
+  require('d3-drag')
 );
 import { event as currentEvent } from 'd3-selection';
 import data from './data.json';
@@ -124,8 +125,8 @@ class Viz {
       .join('g')
       .attr('data-name', d => d.id)
       .attr('class', d => `img-group ${d.group}`)
-      .attr('fill', 'none');
-    // .call(drag(simulation));
+      .attr('fill', 'none')
+    .call(drag(simulation));
 
     const cir = node
       .append('circle')
@@ -153,7 +154,7 @@ class Viz {
     node.on('touchmove mousemove', function(d) {
       tooltip.style('visibility', 'visible');
       tooltip.select('.tooltip__about').text(d.tooltip);
-      tooltip.select('.tooltip__name').text(d.id);
+      tooltip.select('.tooltip__name').html(d.id);
 
       tooltip
         .style('top', `${currentEvent.pageY - 10}px`)
@@ -242,6 +243,30 @@ class Viz {
           break;
       }
       return res * nodeRadius;
+    }
+    function drag(simulation) {
+      function dragstarted(d) {
+        if (!currentEvent.active) simulation.alphaTarget(0.3).restart();
+        d.fx = d.x;
+        d.fy = d.y;
+      }
+
+      function dragged(d) {
+        d.fx = currentEvent.x;
+        d.fy = currentEvent.y;
+      }
+
+      function dragended(d) {
+        if (!currentEvent.active) simulation.alphaTarget(0);
+        d.fx = currentEvent.x;
+        d.fy = currentEvent.y;
+      }
+
+      return d3
+        .drag()
+        .on('start', dragstarted)
+        .on('drag', dragged)
+        .on('end', dragended);
     }
   }
   destroyGraphic() {

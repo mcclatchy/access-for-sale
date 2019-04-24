@@ -241,7 +241,7 @@
       "tooltip": "Occupation: Unknown."
     },
     {
-      "id": "Xinyue \"Daniel\" Lou",
+      "id": "Xinyue &quot;Daniel&quot; Lou",
       "group": "guest",
       "photo": "daniellou",
       "tooltip": "A Chinese-born American and New York-based official campaign fundraiser for Trump's 2020 reelection campaign, who for years has served as a promoter of Chinese Communist Party initiatives abroad. He participated in a Communist Party event in Trump World Tower in 2017 promoting Chinese President Xi Jinping's infrastructure initiative to spread Chinese influence – the Belt and Road initiative. Through his work with the RNC, Lou also advertised access to Trump via events in Texas, Wisconsin and New York."
@@ -486,7 +486,7 @@
       "relationship": "attended"
     },
     {
-      "source": "Xinyue \"Daniel\" Lou",
+      "source": "Xinyue &quot;Daniel&quot; Lou",
       "target": "Mar-a-Lago Safari Night 2018",
       "relationship": "attended"
     },
@@ -496,7 +496,7 @@
       "relationship": "attended"
     },
     {
-      "source": "Xinyue \"Daniel\" Lou",
+      "source": "Xinyue &quot;Daniel&quot; Lou",
       "target": "RNC Cipriani Breakfast",
       "relationship": "independently attended"
     },
@@ -506,7 +506,7 @@
       "relationship": "independently attended"
     },
     {
-      "source": "Xinyue \"Daniel\" Lou",
+      "source": "Xinyue &quot;Daniel&quot; Lou",
       "target": "Mar-a-Lago Friends of Israel",
       "relationship": "attended"
     },
@@ -526,7 +526,7 @@
       "relationship": "paid percentage to"
     },
     {
-      "source": "Xinyue \"Daniel\" Lou",
+      "source": "Xinyue &quot;Daniel&quot; Lou",
       "target": "Mar-a-Lago RNC Event",
       "relationship": "independently attended"
     }
