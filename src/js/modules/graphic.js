@@ -18,23 +18,23 @@ class Viz {
     const nodes = data.nodes.map(d => Object.create(d));
 
     let nodeRadius = 20;
-    let linkDistance = 60;
+    let linkDistance = 70;
     let chargeStr = -550;
     let xDenom = 2.2;
     let xStr = 0.02;
-    let yDenom = .85;
+    let yDenom = .9;
     let yStr = 0.25;
 
     let hlColor = '#18aef9';
 
     if (window.innerWidth < 600) {
       nodeRadius = 15;
-      linkDistance = 45;
+      linkDistance = 55;
       chargeStr = -470;
       xDenom = 2.2;
-      xStr = 0.09;
+      xStr = 0.1;
       yDenom = .8;
-      yStr = 0.15;
+      yStr = 0.2;
     }
 
     const groupData = [

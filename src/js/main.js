@@ -11,11 +11,7 @@ let height;
 function init() {
   let width = container.clientWidth;
 
-  if (window.innerWidth < 768) {
-    height = 500;
-  } else {
-    height = 700;
-  }
+  window.innerWidth < 768 ? (height = 500) : (height = 700);
   viz = new Viz(width, height);
   viz.destroyGraphic();
   viz.renderGraphic();
@@ -65,10 +61,10 @@ function sendHeight() {
   );
 }
 
-function handleOrientationChange(e) {
-  if (e.matches) {
-    height = 500;
-  } else {
-    height = 700;
-  }
-}
+// function handleOrientationChange(e) {
+//   if (e.matches) {
+//     height = 500;
+//   } else {
+//     height = 700;
+//   }
+// }

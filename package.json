@@ -6,6 +6,7 @@
     "autoprefixer": "^9.1.5",
     "d3": "^5.9.2",
     "eslint": "^5.16.0",
+    "gootenberg": "^1.0.0",
     "inspector": "^0.5.0",
     "nunjucks": "^3.1.3",
     "parcel-bundler": "^1.12.3",
@@ -13,16 +14,18 @@
   },
   "config": {
     "url": "https://media.miamiherald.com/static/media/projects/2019/",
-    "docID": "[GOOGLE DOC ID]"
+    "docID": "1XxaCoAb0y3Z-wcWcZLptliECJ_2JLWQMo_MW_rWCcig"
   },
   "scripts": {
     "start": "parcel src/html/index.njk -p 3000",
     "build": "parcel build src/html/index.njk --public-url $npm_package_config_url$npm_package_name --out-dir build",
-    "text": "googledoc-to-json $npm_package_config_docID -c drive.json -o ./src/html/global.json"
+    "text": "googledoc-to-json $npm_package_config_docID -c drive.json -o ./src/html/global.json",
+    "get:data": "node ./utils/get-data.js $npm_package_config_docID sheet"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-0",
     "@babel/preset-env": "^7.4.3",
+    "fs-extra": "^7.0.1",
     "parcel-plugin-nunjucks": "git+https://git@github.com/aaronalbright/parcel-plugin-nunjucks.git"
   }
 }
